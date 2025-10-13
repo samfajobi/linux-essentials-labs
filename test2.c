@@ -62,3 +62,6 @@ static int DetectWindowTestParse04 (void)
     DetectWindowFree(NULL, wd);
     PASS;
 }
+
+
+\test DetectWindowTestParse02 is a test for setting the window opt negated
