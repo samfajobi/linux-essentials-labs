@@ -30,3 +30,29 @@ A **package manager** is a tool that automates the process of installing, updati
 
 ## 🌍 How Package Managers Fetch Software from Repositories
 A **repository** is a server that stores software packages. When a package manager installs software:     
+
+1. It **checks the repository list** (e.g., `/etc/apt/sources.list` in Ubuntu).
+2. It **downloads the package** and its dependencies.
+3. It **installs and configures the software** automatically.
+
+### 📁 Example of an Ubuntu Repository Entry
+```plaintext
+Types: deb
+URIs: http://ports.ubuntu.com/ubuntu-ports/
+Suites: noble noble-updates noble-backports noble-security
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+```
+
+## 🔄 Why Should You Run `apt update` After Installing Ubuntu?
+When you install Ubuntu, the packages included in the ISO image might be outdated. Running:
+```bash
+apt install sudo
+sudo apt update
+```
+✅ Updates the package list from repositories.
+
+Then, to install the latest versions of packages, run:
+```bash
+sudo apt upgrade -y
+```
