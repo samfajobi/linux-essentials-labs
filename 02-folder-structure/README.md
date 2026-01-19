@@ -17,4 +17,19 @@
 | `/var` | Stores logs, caches, and temporary files that change frequently. |
 | `/etc` | Stores system configuration files. |
 
+### **User & Application-Specific Directories**
+| Directory | Description |
+|-----------|-------------|
+| `/home` | Default location for user home directories. |
+| `/opt` | Used for installing optional third-party software. |
+| `/srv` | Holds data for services like web servers (rarely used in containers). |
+| `/root` | Home directory for the root user. |
 
+### **Temporary & Volatile Directories**
+| Directory | Description |
+|-----------|-------------|
+| `/tmp` | Temporary files (cleared on reboot). |
+| `/run` | Holds runtime data for processes. |
+| `/proc` | Virtual filesystem for process and system information. |
+| `/sys` | Virtual filesystem for hardware and kernel information. |
+| `/dev` | Contains device files (e.g., `/dev/null`, `/dev/sda`). |
