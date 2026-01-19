@@ -33,3 +33,10 @@
 | `/proc` | Virtual filesystem for process and system information. |
 | `/sys` | Virtual filesystem for hardware and kernel information. |
 | `/dev` | Contains device files (e.g., `/dev/null`, `/dev/sda`). |
+
+### **Mount Points**
+| Directory | Description |
+|-----------|-------------|
+| `/mnt` | Temporary mount point for external filesystems. |
+| `/media` | Mount point for removable media (USB, CDs). |
+| `/data` | Likely your **mounted volume** from Windows (`C:/ubuntu-data`). |
