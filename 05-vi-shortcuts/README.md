@@ -58,3 +58,17 @@
 - `N` – Repeat last search **backward**  
 - `:%s/old/new/g` – Replace **all occurrences** of "old" with "new"  
 - `:s/old/new/g` – Replace **all occurrences** in the current line  
+
+
+---
+
+### Working with Multiple Files
+- `:e filename` – Open a **new file**  
+- `:w` – Save file  
+- `:wq` – Save and exit  
+- `:q!` – Quit **without saving**  
+- `:split filename` – Split screen **horizontally** and open another file  
+- `:vsplit filename` – Split screen **vertically**  
+- `Ctrl + w + w` – Switch between split screens  
+
+---
