@@ -51,3 +51,30 @@ chown newuser filename  # Change owner
 chown newuser:newgroup filename  # Change owner and group
 chown :newgroup filename  # Change only group
 ```
+
+Recursively change ownership:
+```bash
+chown -R newuser:newgroup directory/
+```
+
+## Changing Group Ownership with `chgrp`
+```bash
+chgrp newgroup filename  # Change group
+chgrp -R newgroup directory/  # Change group recursively
+```
+
+## Special Permissions
+### SetUID (`s` on user execute bit)
+Allows users to run a file with the file owner's permissions.
+```bash
+chmod u+s filename
+```
+Example: `/usr/bin/passwd` allows users to change their passwords.
+
+### SetGID (`s` on group execute bit)
+Files: Users run the file with the group's permissions.
+Directories: Files created inside inherit the group.
+```bash
+chmod g+s filename  # Set on file
+chmod g+s directory/  # Set on directory
+```
