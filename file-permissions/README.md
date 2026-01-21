@@ -19,3 +19,35 @@ Output example:
 ```bash
 -rwxr--r-- 1 user group 1234 Mar 28 10:00 myfile.sh
 ```
+
+## Changing Permissions with `chmod`
+### Using Symbolic Mode
+Modify permissions using symbols:
+- Add (`+`), remove (`-`), or set (`=`) permissions.
+
+Examples:
+```bash
+chmod u+x filename  # Add execute for user
+chmod g-w filename  # Remove write for group
+chmod o=r filename  # Set read-only for others
+chmod u=rwx,g=rx,o= filename  # Set full access for user, read/execute for group, and no access for others
+```
+
+### Using Numeric (Octal) Mode
+Each permission has a value:
+- Read (`4`), Write (`2`), Execute (`1`).
+
+Examples:
+```bash
+chmod 755 filename  # User (rwx), Group (r-x), Others (r-x)
+chmod 644 filename  # User (rw-), Group (r--), Others (r--)
+chmod 700 filename  # User (rwx), No access for others
+```
+
+## Changing Ownership with `chown`
+Modify file owner and group:
+```bash
+chown newuser filename  # Change owner
+chown newuser:newgroup filename  # Change owner and group
+chown :newgroup filename  # Change only group
+```
