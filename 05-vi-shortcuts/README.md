@@ -20,3 +20,41 @@
 - `gg` – Move to the **start** of the file  
 - `G` – Move to the **end** of the file  
 - `:n` – Move to **line number `n`** 
+
+---
+
+### Insert Mode Shortcuts
+- `i` – Insert before cursor  
+- `I` – Insert at the beginning of the line  
+- `a` – Append after cursor  
+- `A` – Append at the end of the line  
+- `o` – Open a new line below  
+- `O` – Open a new line above  
+- `Esc` – Exit insert mode  
+
+---
+
+### Editing Text
+- `x` – Delete a **character**  
+- `X` – Delete a **character before cursor**  
+- `dw` – Delete a **word**  
+- `dd` – Delete a **line**  
+- `d$` – Delete from **cursor to end of line**  
+- `d0` – Delete from **cursor to beginning of line**  
+- `D` – Delete from **cursor to end of line**  
+- `u` – **Undo** last action  
+- `Ctrl + r` – **Redo** an undone change  
+- `yy` – Copy (yank) a **line**  
+- `yw` – Copy (yank) a **word**  
+- `p` – Paste **after** the cursor  
+- `P` – Paste **before** the cursor  
+
+---
+
+### Search and Replace
+- `/pattern` – Search **forward** for a pattern  
+- `?pattern` – Search **backward** for a pattern  
+- `n` – Repeat last search **forward**  
+- `N` – Repeat last search **backward**  
+- `:%s/old/new/g` – Replace **all occurrences** of "old" with "new"  
+- `:s/old/new/g` – Replace **all occurrences** in the current line  
