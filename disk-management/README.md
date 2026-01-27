@@ -51,3 +51,40 @@ Check available disk space:
 ```bash
 df -h
 ```
+### Using `du`
+Find the size of a directory:
+```bash
+du -sh /var/log
+```
+
+## Partition Management
+### Creating a Partition with `fdisk`
+```bash
+fdisk /dev/sdX
+```
+Follow the interactive prompts to create a partition.
+
+### Formatting a Partition
+Format as ext4:
+```bash
+mkfs.ext4 /dev/sdX1
+```
+Format as XFS:
+```bash
+mkfs.xfs /dev/sdX1
+```
+
+## Mounting and Unmounting
+### Mount a Partition
+```bash
+mount /dev/sdX1 /mnt
+```
+### Unmount a Partition
+```bash
+umount /mnt
+```
+### Remount a Partition
+```bash
+mount -o remount,rw /mnt
+```
+
