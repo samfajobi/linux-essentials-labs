@@ -152,3 +152,29 @@ Then confirm:
 ```bash
 lsblk
 ```
+
+### When to Use `mount`
+Use `mount` when:
+The partition already exists and is formatted
+You just want to make it accessible
+```bash
+sudo mkdir /mnt/mydisk
+sudo mount /dev/sdb1 /mnt/mydisk
+```
+Now your disk is available at `/mnt/mydisk`.
+
+### When to Use fdisk + mount (Full Setup)
+Use `fdisk + mkfs + mount` when:
+The disk is completely new
+You need to partition → format → mount it
+```bash
+# 1. Check available disks
+lsblk
+# 2. Create partition
+sudo fdisk /dev/sdb
+# 3. Format the partition
+sudo mkfs.ext4 /dev/sdb1
+# 4. Mount it
+sudo mkdir /data
+sudo mount /dev/sdb1 /data
+```
