@@ -138,3 +138,17 @@ lsblk
 `sda` → existing disk (already partitioned)
 
 `sdb` → new disk, no partitions yet
+
+### When to use `fdisk`
+Use `fdisk` when:
+- The disk is brand new and has no partitions
+- You want to create `/dev/sdb1`, `/dev/sdb2`, etc.
+
+Inside `fdisk`:
+1. Press `n` → create a new partition
+2. Press `w` → write changes
+
+Then confirm:
+```bash
+lsblk
+```
