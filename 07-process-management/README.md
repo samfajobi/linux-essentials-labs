@@ -21,3 +21,15 @@ A process is an instance of a running program. Linux provides multiple utilities
 - `kill -CONT PID` – Resume a stopped process
 - `renice -n 10 -p PID` – Lower priority of a process
 - `renice -n -5 -p PID` – Increase priority of a process (requires root)
+
+### Monitoring System Processes
+- `top` – Interactive process viewer
+- `htop` – User-friendly process viewer (requires installation)
+- `nice -n 10 command` – Run a command with a specific priority
+- `renice -n -5 -p PID` – Change priority of an existing process
+
+### Daemon Process Management
+- `systemctl list-units --type=service` – List all system daemons
+- `systemctl start service-name` – Start a daemon/service
+- `systemctl stop service-name` – Stop a daemon/service
+- `systemctl enable service-name` – Enable a service at startup
